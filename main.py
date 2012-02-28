@@ -5,7 +5,7 @@ from jinja2 import Environment, FileSystemLoader
 path2templates = ["./tests/queries/templates/queries", "./tests/queries/templates/common"]
 path2result = "./tests/queries"
 
-env = Environment(loader = FileSystemLoader( path2templates ))
+env = Environment(loader = FileSystemLoader( path2templates ), trim_blocks=True)
 
 template = env.get_template( "report1/v12.sql")
 res = template.render()

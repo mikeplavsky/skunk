@@ -9,8 +9,5 @@ JOIN SELECT Url FROM WWW
 
 
 
-
 WHERE IsKindness = True
-
-AND AmountOfEvil is None
-
+ AND AmountOfEvil is None

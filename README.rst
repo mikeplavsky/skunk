@@ -1,7 +1,7 @@
 Check please tests folder.
 There are two bad examples and good one
 
-The point is you should contruct main query template
+The point is you should contruct main query template 
 by including executable sub-templates which are preparing temp tables
 for main template.
 
@@ -14,10 +14,10 @@ Second every such sub-template is testable independatly!
 So testability of such system is very high.
 
 Bad examples are using in the worst scenario **include** for part of WHERE
-##queries/templates/queries/report1##
+**queries/templates/queries/report1**
 
 In the other example parent/child inheretance.
-##queries/templates/queries/report2##
+**queries/templates/queries/report2**
 
 Both are obscure, difficult to maintain.
 And used templates can not be tested!

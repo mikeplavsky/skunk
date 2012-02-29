@@ -6,7 +6,7 @@ set @docId = %(docId)s
 
 -- expects siteId, returns all sites in #all_sites
 
-SELECT INTO #all_sites FROM Webs WHERE Webs.SiteId = @siteId
+SELECT * INTO #all_sites FROM Webs WHERE Webs.SiteId = @siteId
 
 -- expects Document Library Name in @docLib
 -- returns all Documents

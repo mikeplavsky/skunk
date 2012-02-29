@@ -5,18 +5,18 @@ from jinja2 import Environment, FileSystemLoader
 path2templates = ["./tests/queries/templates/queries", "./tests/queries/templates/common"]
 path2result = "./tests/queries"
 
-env = Environment(loader = FileSystemLoader( path2templates ), trim_blocks=True)
+env = Environment(loader = FileSystemLoader( path2templates ))
 
-template = env.get_template( "report1/v12.sql")
-res = template.render()
+def render(name, fn):
 
-import os
-open(os.path.join(path2result, 'v12.sql'), 'w' ).write( res )
+  template = env.get_template( name )
+  res = template.render()
 
-template = env.get_template( "report2/v14.sql")
-res = template.render()
+  import os
+  open(os.path.join(path2result, fn), 'w' ).write( res )
 
-open(os.path.join(path2result, 'v14.sql'), 'w' ).write( res )
-
+render( "report1/v12.sql", "bad_example1.sql" )
+render( "report2/v14.sql", "bad_example2.sql" )
+render( "report3/content.sql", "good_example1.sql" )
 
 

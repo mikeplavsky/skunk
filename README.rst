@@ -13,6 +13,8 @@ First it is very clear approach.
 Second every such sub-template is testable independently! 
 So testability of such system is very high.
 
+Check **queries/templates/queries/report2** for good example.
+
 Bad examples are using in the worst scenario **include** for part of WHERE
 **queries/templates/queries/report1**
 

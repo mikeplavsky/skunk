@@ -1,7 +1,7 @@
 ./main.py will process all templates from **path2templates** and 
 generate directories tree with SQL scripts into **path2result**
 
-There are all templates directories which should be considered during processing in **templates_dir** 
+There are all templates directories which should be considered during processing in **templates_dirs** 
 
 
 Examples:

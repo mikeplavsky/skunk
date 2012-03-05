@@ -32,8 +32,8 @@ def mkdir(where, templates):
     import shutil
     path = os.path.join(where, tmpl[0])
 
-    shutil.rmtree(path, ignore_errors=True)
-    os.makedirs( path )
+    if not os.access(path, os.R_OK):
+      os.makedirs( path )
 
     tmpl[0] = os.path.join( path, tmpl[2] )
 
